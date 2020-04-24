@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row cardMargin">
+    <div class="col-lg-4 col-md-6 col-sm-12 cardMarginx2"
+      *ngFor="let recipe of (recipes | async).recipes; let i = index">
+        <div class="card cursorPointer" [routerLink] = "['/recipes/detail', recipe.id]">
+          <img src="{{ recipe.img }}" class="card-img-top" alt="{{ recipe.title }}">
+          <div class="card-body">
+            <h1 class="card-title">{{ recipe.title }}</h1>
+            <p class="card-text">{{ recipe.description }}</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

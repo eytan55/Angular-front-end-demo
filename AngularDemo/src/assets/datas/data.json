@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "creatorName": "Dave",
+    "title": "Raspberry pie",
+    "description": "Beefsteack Tagalog is a type of Filipino beef stew. This is also known as Beefsteak to some people. It is comprised of thin slices of beef and a generous amount of onions. These are stewed in a soy sauce and lemon juice mixture until the beef gets very tender. It is best enjoyed with warm rice.",
+    "creationDate": "2020-01-26",
+    "img": "assets/img/recipe1.jpg",
+    "active": true,
+    "time": "01:20:00",
+    "people": 2,
+    "difficulty": "medium",
+    "cost": 2,
+    "ingredient": [
+      {
+        "name": "meet",
+        "quantity": 1,
+        "unitMeasure": "kg"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unitMeasure": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "creatorName": "Dave",
+    "title": "Beefsteack",
+    "description": "Beefsteack Tagalog is a type of Filipino beef stew. This is also known as Beefsteak to some people. It is comprised of thin slices of beef and a generous amount of onions. These are stewed in a soy sauce and lemon juice mixture until the beef gets very tender. It is best enjoyed with warm rice.",
+    "creationDate": "2020-01-26",
+    "img": "assets/img/recipe2.jpg",
+    "active": true,
+    "time": "00:45:00",
+    "people": 2,
+    "difficulty": "medium",
+    "cost": 2,
+    "ingredient": [
+      {
+        "name": "meet",
+        "quantity": 1,
+        "unitMeasure": "kg"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unitMeasure": ""
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "creatorName": "Dave",
+    "title": "Strawberry yogurt",
+    "description": "Beefsteack Tagalog is a type of Filipino beef stew. This is also known as Beefsteak to some people. It is comprised of thin slices of beef and a generous amount of onions. These are stewed in a soy sauce and lemon juice mixture until the beef gets very tender. It is best enjoyed with warm rice.",
+    "creationDate": "2020-01-26",
+    "img": "assets/img/recipe3.jpg",
+    "active": true,
+    "time": "00:40:00",
+    "people": 2,
+    "difficulty": "medium",
+    "cost": 2,
+    "ingredient": [
+      {
+        "name": "meet",
+        "quantity": 1,
+        "unitMeasure": "kg"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unitMeasure": ""
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "creatorName": "Dave",
+    "title": "Pizza",
+    "description": "Beefsteack Tagalog is a type of Filipino beef stew. This is also known as Beefsteak to some people. It is comprised of thin slices of beef and a generous amount of onions. These are stewed in a soy sauce and lemon juice mixture until the beef gets very tender. It is best enjoyed with warm rice.",
+    "creationDate": "2020-01-26",
+    "img": "assets/img/recipe4.jpg",
+    "active": true,
+    "time": "01:20:00",
+    "people": 2,
+    "difficulty": "medium",
+    "cost": 2,
+    "ingredient": [
+      {
+        "name": "meet",
+        "quantity": 1,
+        "unitMeasure": "kg"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unitMeasure": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "creatorName": "Dave",
+    "title": "Summer salad",
+    "description": "Beefsteack Tagalog is a type of Filipino beef stew. This is also known as Beefsteak to some people. It is comprised of thin slices of beef and a generous amount of onions. These are stewed in a soy sauce and lemon juice mixture until the beef gets very tender. It is best enjoyed with warm rice.",
+    "creationDate": "2020-01-26",
+    "img": "assets/img/recipe5.jpg",
+    "active": true,
+    "time": "01:20:00",
+    "people": 2,
+    "difficulty": "medium",
+    "cost": 2,
+    "ingredient": [
+      {
+        "name": "meet",
+        "quantity": 1,
+        "unitMeasure": "kg"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unitMeasure": ""
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "creatorName": "Dave",
+    "title": "Muffin",
+    "description": "Beefsteack Tagalog is a type of Filipino beef stew. This is also known as Beefsteak to some people. It is comprised of thin slices of beef and a generous amount of onions. These are stewed in a soy sauce and lemon juice mixture until the beef gets very tender. It is best enjoyed with warm rice.",
+    "creationDate": "2020-01-26",
+    "img": "assets/img/recipe6.jpg",
+    "active": true,
+    "time": "01:20:00",
+    "people": 2,
+    "difficulty": "medium",
+    "cost": 2,
+    "ingredient": [
+      {
+        "name": "meet",
+        "quantity": 1,
+        "unitMeasure": "kg"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unitMeasure": ""
+      }
+    ]
+  }
+]

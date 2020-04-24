@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light floating navbar-expand-sm cm-navbar headerBG">
+  <a class="navbar-brand" routerLink="/home"><fa-icon [icon]="faHamburger"></fa-icon> MyRecipes</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto mx-auto">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link navTextSize" routerLink="/home"><fa-icon [icon]="faHome"></fa-icon> Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link navTextSize"routerLink="/recipes/list"><fa-icon [icon]="faBook"></fa-icon> Recipes List</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link navTextSize" routerLink="/recipes/new"><fa-icon [icon]="faPlusCircle"></fa-icon> Create new recipe</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search recipe..." aria-label="Search recipe...">
+      <button type="button" class="btn btn-success"><fa-icon [icon]="faSearch"></fa-icon></button>
+    </form>
+
+  </div>
+</nav>
