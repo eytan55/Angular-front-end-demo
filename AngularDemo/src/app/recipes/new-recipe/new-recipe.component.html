@@ -1,1 +1,122 @@
-<p>new-recipe works!</p>
+<h1 class="title">New Recipe</h1>
+<div class="alert alert-warning" role="alert" *ngIf="invalidFields.length > 0">
+  <div class="errorTitle">Please fill in the missing fields: </div>
+  <div *ngFor="let error of invalidFields">- {{ error }}</div>
+</div>
+<form [formGroup]="formRecipe" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" formControlName="name" placeholder="Your name...">
+    </div>
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" formControlName="title" placeholder="Title...">
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="image" placeholder="Image URL...">
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" rows="3" formControlName="description" placeholder="Description..."></textarea>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+    <label>Hour</label>
+    <select class="form-control" formControlName="hour">
+      <option>00</option>
+      <option>01</option>
+      <option>02</option>
+      <option>03</option>
+      <option>04</option>
+      <option>05</option>
+      <option>06</option>
+      <option>07</option>
+      <option>08</option>
+      <option>09</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+      <option>18</option>
+      <option>19</option>
+      <option>20</option>
+      <option>21</option>
+      <option>22</option>
+      <option>23</option>
+      <option>24</option>
+    </select>
+  </div>
+  <div class="form-group col-md-6">
+    <label>Minutes</label>
+    <select class="form-control" formControlName="minutes">
+      <option>00</option>
+      <option>05</option>
+      <option>10</option>
+      <option>15</option>
+      <option>20</option>
+      <option>25</option>
+      <option>30</option>
+      <option>35</option>
+      <option>40</option>
+      <option>45</option>
+      <option>50</option>
+      <option>55</option>
+    </select>
+  </div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-4">
+    <label>Number of people</label>
+    <input type="text" class="form-control" formControlName="forPeople" placeholder="1,2,3...,10...">
+  </div>
+  <div class="form-group col-md-4">
+    <label>Difficulty</label>
+    <select class="form-control" formControlName="difficulty">
+      <option>Easy</option>
+      <option>Medium</option>
+      <option>Hard</option>
+    </select>
+  </div>
+  <div class="form-group col-md-4">
+    <label>Price</label>
+    <select class="form-control" formControlName="cost">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>Hight</option>
+    </select>
+  </div>
+</div>
+<button type="submit" class="btn btn-success btn-lg btn-block btnStyle btn-sm">Save</button>
+</form>
+<form [formGroup]="formIngredient" (ngSubmit)="AddIngredient()">
+<h1>Ingredients</h1>
+<div class="card">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-6 textCenter" *ngFor="let ing of ingredients; let i = index">
+    <div class="card-body">
+      <p class="card-text">{{ ing.name }}</p>
+      <p class="card-text">{{ ing.quantity }} {{ ing.unitMeasure }}</p>
+      <a class="btn btn-danger btntextColor" (click)="RemoveIngredient(i)"><fa-icon [icon]="faTimes" size="sm"></fa-icon></a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" formControlName="name" placeholder="Name...">
+</div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <input type="text" class="form-control" formControlName="quantity" placeholder="Quantity...">
+  </div>
+  <div class="form-group col-md-5">
+    <input type="text" class="form-control" formControlName="unitMeasure" placeholder="Unit measure...">
+  </div>
+  <div class="form-group col-md-1">
+    <button type="submit" class="btn btn-success btn-lg btn-block btnStyle btn-sm" ><fa-icon [icon]="faPlusCircle" size="lg"></fa-icon></button>
+</div>
+</div>
+</form>
+

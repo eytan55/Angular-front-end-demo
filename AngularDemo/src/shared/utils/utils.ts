@@ -1,4 +1,7 @@
-export default class Utils {
-  static doSomething(val: string) { return val; }
-  static doSomethingElse(val: string) { return val; }
+import { Recipe } from 'src/models/recipe';
+
+export class Utils {
+  static countElementsInArray(recipes: Recipe[]) {
+    return recipes.length;
+   }
 }

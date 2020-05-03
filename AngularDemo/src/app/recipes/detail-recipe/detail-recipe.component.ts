@@ -5,6 +5,7 @@ import { map, switchMap } from 'rxjs/operators';
 import { Recipe } from '../../../models/recipe';
 import * as fromApp from '../../../store/reducer/app.reducer';
 // import * as RecipesActions from '../store/recipe.actions';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-detail-recipe',
@@ -13,6 +14,7 @@ import * as fromApp from '../../../store/reducer/app.reducer';
 })
 export class DetailRecipeComponent implements OnInit {
 
+  faDollarSign = faDollarSign;
   id: number;
   recipe: Recipe;
 

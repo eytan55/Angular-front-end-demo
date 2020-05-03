@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes.component';
 import { NewRecipeComponent } from './new-recipe/new-recipe.component';
 import { ListRecipesComponent } from './list-recipes/list-recipes.component';
@@ -19,7 +20,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     RouterModule,
     CommonModule,
     RecipesRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
   ]
 })
 export class RecipesModule { }

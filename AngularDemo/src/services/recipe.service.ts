@@ -8,6 +8,7 @@ import { Ingredient } from '../models/ingredient';
 import { Recipe } from '../models/recipe';
 import * as fromApp from '../store/reducer/app.reducer';
 import * as RecipeActions from '../store/actions/recipe.actions';
+import { Utils } from '../shared/utils/utils';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,8 @@ export class RecipeService {
       map(recipes => {
         return recipes.map(recipe => {
           return {
-            ...recipe
+            ...recipe,
+            ingredients: recipe.ingredient ? recipe.ingredient : []
           };
         });
       }), catchError(this.handleError),
@@ -33,6 +35,35 @@ export class RecipeService {
         },
         err => console.log('HTTP Error:', err),
         () => console.log('HTTP request completed.'));
+  }
+
+  addRecipe(recipe: Recipe) {
+    console.log('in addRecipe()');
+    this.store.dispatch(new RecipeActions.AddRecipe(recipe));
+    // this.http.get<Recipe[]>('../assets/datas/data.json')
+    // .pipe(
+    //   map(recipes => {
+    //     return recipes.map(recipe => {
+    //       return {
+    //         ...recipe,
+    //         ingredients: recipe.ingredient ? recipe.ingredient : []
+    //       };
+    //     });
+    //   }), catchError(this.handleError),
+    //   )
+    //   .subscribe( recipes => {
+    //       this.store.dispatch(new RecipeActions.LoadRecipe(recipes));
+    //     },
+    //     err => console.log('HTTP Error:', err),
+    //     () => console.log('HTTP request completed.'));
+  }
+
+  getTotalRecipe(): number {
+    let total = 0;
+    this.store.select('recipes').subscribe( recipes => {
+      total = Utils.countElementsInArray(recipes.recipes);
+    });
+    return total;
   }
 
   private handleError(errorRes: HttpErrorResponse) {

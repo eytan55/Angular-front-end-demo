@@ -1,0 +1,34 @@
+.title{
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.btnStyle{
+  color: white;
+  padding:7px;
+}
+
+input.ng-invalid.ng-touched{
+  border:1px solid red;
+}
+
+textarea.ng-invalid.ng-touched{
+  border:1px solid red;
+}
+
+select.ng-invalid.ng-touched{
+  border:1px solid red;
+}
+
+.errorTitle {
+  margin-bottom: 10px;
+}
+
+.textCenter{
+  text-align: center;
+}
+
+.btntextColor{
+  color: white;
+}

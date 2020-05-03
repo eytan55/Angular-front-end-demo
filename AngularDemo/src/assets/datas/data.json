@@ -10,15 +10,15 @@
     "time": "01:20:00",
     "people": 2,
     "difficulty": "medium",
-    "cost": 2,
+    "cost": 1,
     "ingredient": [
       {
-        "name": "meet",
+        "name": "Meet",
         "quantity": 1,
         "unitMeasure": "kg"
       },
       {
-        "name": "onion",
+        "name": "Onion",
         "quantity": 1,
         "unitMeasure": ""
       }
@@ -35,15 +35,35 @@
     "time": "00:45:00",
     "people": 2,
     "difficulty": "medium",
-    "cost": 2,
+    "cost": 3,
     "ingredient": [
       {
-        "name": "meet",
+        "name": "Meet",
         "quantity": 1,
         "unitMeasure": "kg"
       },
       {
-        "name": "onion",
+        "name": "Onion",
+        "quantity": 1,
+        "unitMeasure": ""
+      },
+      {
+        "name": "Tomato",
+        "quantity": 0.5,
+        "unitMeasure": "kg"
+      },
+      {
+        "name": "Red bell pepper",
+        "quantity": 1,
+        "unitMeasure": ""
+      },
+      {
+        "name": "Lettuce",
+        "quantity": 0.2,
+        "unitMeasure": "kg"
+      },
+      {
+        "name": "Red pepper",
         "quantity": 1,
         "unitMeasure": ""
       }
@@ -85,7 +105,7 @@
     "time": "01:20:00",
     "people": 2,
     "difficulty": "medium",
-    "cost": 2,
+    "cost": 1,
     "ingredient": [
       {
         "name": "meet",
@@ -110,7 +130,7 @@
     "time": "01:20:00",
     "people": 2,
     "difficulty": "medium",
-    "cost": 2,
+    "cost": 1,
     "ingredient": [
       {
         "name": "meet",

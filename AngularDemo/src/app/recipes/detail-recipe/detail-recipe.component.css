@@ -4,6 +4,30 @@
   margin-bottom:10px;
 }
 
+.titleRecipe{
+  font-weight: bold;
+  font-size: 23px;
+  text-align: center;
+}
+
 .textCenter{
   text-align: center;
+}
+
+.ingredientTitle{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  background-color:antiquewhite;
+  font-size: 18px;
+}
+
+.cardMargin{
+  margin-bottom: 50px;
+}
+
+.ingredientMargin{
+  margin-bottom: 15px;
 }

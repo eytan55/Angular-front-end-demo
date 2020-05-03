@@ -1,33 +1,51 @@
 <div class="row justify-content-center">
-<div class="col-lg-8 col-md-12 col-sm-12 ">
-<div class="card">
-  <img src="{{ recipe.img }}" class="card-img-top" alt="{{ recipe.title }}">
-  <div class="card-body">
-    <h1 class="card-title">{{ recipe.title }}</h1>
-    <p class="card-text">{{ recipe.description }}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3 title textCenter">Time</div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3 title textCenter">People</div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3 title textCenter">Difficulty</div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-3 title textCenter">Price</div>
+  <div class="col-lg-8 col-md-12 col-sm-12 ">
+    <div class="card cardMargin">
+      <img src="{{ recipe.img }}" class="card-img-top" alt="{{ recipe.title }}">
+      <div class="card-body">
+        <h1 class="card-title titleRecipe">{{ recipe.title }}</h1>
+        <p class="card-text">{{ recipe.description }}</p>
       </div>
-      <div class="row">
-      <div class="col-lg-3 col-md-3 col-sm-3 col-3 textCenter">{{ recipe.time }}</div>
-      <div class="col-lg-3 col-md-3 col-sm-3 col-3 textCenter">{{ recipe.people }}</div>
-      <div class="col-lg-3 col-md-3 col-sm-3 col-3 textCenter">{{ recipe.difficulty }}</div>
-      <div class="col-lg-3 col-md-3 col-sm-3 col-3 textCenter">{{ recipe.cost }}</div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3 title textCenter">Time</div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3 title textCenter">People</div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3 title textCenter">Difficulty</div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3 title textCenter">Price</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3 textCenter">{{ recipe.time }}</div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3 textCenter">{{ recipe.people }}</div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3 textCenter">{{ recipe.difficulty }}</div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3 textCenter" [ngSwitch]="recipe.cost">
+              <div *ngSwitchCase="1">
+                <fa-icon [icon]="faDollarSign"></fa-icon>
+              </div>
+              <div *ngSwitchCase="2">
+                <fa-icon [icon]="faDollarSign"></fa-icon>
+                <fa-icon [icon]="faDollarSign"></fa-icon>
+              </div>
+              <div *ngSwitchCase="3">
+                <fa-icon [icon]="faDollarSign"></fa-icon>
+                <fa-icon [icon]="faDollarSign"></fa-icon>
+                <fa-icon [icon]="faDollarSign"></fa-icon>
+              </div>
+              <div *ngSwitchDefault>
+                <fa-icon [icon]="faDollarSign"></fa-icon>
+                <fa-icon [icon]="faDollarSign"></fa-icon>
+              </div>
+            </div>
+          </div>
+        </li>
+        <h1 class="ingredientTitle">Ingredients</h1>
+          <div class="row cardMargin textCenter">
+            <div class="col-lg-4 col-md-6 col-sm-12 ingredientMargin" *ngFor="let product of recipe.ingredient">
+              <h2>{{product.name}}</h2>
+              <p> {{product.quantity}} {{product.unitMeasure}} </p>
+            </div>
+          </div>
+      </ul>
     </div>
-    </li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
   </div>
-</div>
-</div>
 </div>
