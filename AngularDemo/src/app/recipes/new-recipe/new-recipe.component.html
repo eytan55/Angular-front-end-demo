@@ -1,4 +1,7 @@
 <h1 class="title">New Recipe</h1>
+<div class="alert alert-success" role="alert" *ngIf="newRecipeSuccess">
+  <div class="errorTitle">Recipe added succefully. </div>
+</div>
 <div class="alert alert-warning" role="alert" *ngIf="invalidFields.length > 0">
   <div class="errorTitle">Please fill in the missing fields: </div>
   <div *ngFor="let error of invalidFields">- {{ error }}</div>
@@ -93,7 +96,7 @@
 </form>
 <form [formGroup]="formIngredient" (ngSubmit)="AddIngredient()">
 <h1>Ingredients</h1>
-<div class="card">
+<div class="card listIngredients" *ngIf="ingredients.length > 0">
   <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6 textCenter" *ngFor="let ing of ingredients; let i = index">
     <div class="card-body">

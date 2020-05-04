@@ -22,8 +22,8 @@ export class NewRecipeComponent implements OnInit {
   faMinus = faMinus;
   faTimes = faTimes;
   invalidFields: string[] = [];
-  displayPopUpIngredientSuccess = false;
-  displayPopUpRecipeSuccess = false;
+  newRecipeSuccess = false;
+
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
@@ -62,7 +62,6 @@ export class NewRecipeComponent implements OnInit {
       console.log('newIngredient: ', newIngredient);
       this.ingredients.push(newIngredient);
       this.formIngredient.reset();
-      this.displayPopUpRecipeSuccess = true;
       console.log('this.ingredients: ', this.ingredients);
     }
     else {
@@ -77,6 +76,7 @@ export class NewRecipeComponent implements OnInit {
 
   onSubmit() {
     console.log(this.formRecipe);
+    this.newRecipeSuccess = false;
     const name = this.formRecipe.value.name;
     const title = this.formRecipe.value.title;
     const description = this.formRecipe.value.description;
@@ -109,7 +109,8 @@ export class NewRecipeComponent implements OnInit {
         cost);
       this.recipeService.addRecipe(newRecipe);
       this.formRecipe.reset();
-      this.displayPopUpRecipeSuccess = true;
+      this.newRecipeSuccess = true;
+      this.ingredients = [];
       console.log('newRecipe: ', newRecipe);
     }
     else {
